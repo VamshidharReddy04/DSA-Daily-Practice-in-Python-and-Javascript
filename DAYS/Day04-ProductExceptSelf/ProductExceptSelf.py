@@ -17,7 +17,6 @@ class soultion:
             res[i]*=suffix
             suffix*=nums[i]
         return res
-
 # test cases
 print(soultion().productExceptSelf([1,2,3,4]))
 # output: [24,12,8,6]
