@@ -26,5 +26,5 @@ console.log(maxProfit([7,1,5,3,6,4])); // 5
 console.log(maxProfit([7,6,4,3,1])); // 0
 
 // Approach: One Pass
-// Time Complexity: O(n) where n is the number of days (length of prices array)
+// Time Complexity: O(n) where n is the number of days 
 // Space Complexity: O(1) as we are using only constant space

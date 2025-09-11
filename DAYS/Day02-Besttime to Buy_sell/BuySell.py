@@ -32,6 +32,4 @@ print(maxProfit([7,6,4,3,1]))    # Output: 0
 
 # Approach: Brute Force:O(n^2)
 # Check every possible pair of buy and sell days to find the maximum profit.
-# optimized Approach: One Pass
-# Time Complexity:O(n)
-# Space Complexity:O(1)
+# optimized Approach: One Pass , Time Complexity:O(n) , Space Complexity:O(1)
