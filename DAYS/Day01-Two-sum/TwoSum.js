@@ -3,7 +3,6 @@
 // Input: nums = [2,7,11,15], target = 9
 // Output: [0,1]
 
-
 function TwoSum(nums, target) {
     // create a hash map to store the elements and their indices
     const  seen={};
