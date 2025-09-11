@@ -18,6 +18,7 @@ def twoSumSorted(nums, target):
             right-=1 # move the right pointer to the left
     return[] # if no solution is found, return an empty array
 
+# Test cases
 print(twoSumSorted([2,7,11,15],9))
 # output: [0,1]
 print(twoSumSorted([3,2,4],6))

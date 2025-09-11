@@ -18,7 +18,7 @@ function TwoSum(nums, target) {
         seen[nums[i]]=i;
     }
 }
-
+// Test cases
 console.log(TwoSum([2,7,11,15],9));
 // output: [0,1]
 console.log(TwoSum([3,2,4],6));

@@ -29,7 +29,7 @@ function TwoSumSorted(nums, target) {
     return[];
 }
 
-
+// Test cases
 console.log(TwoSumSorted([2,7,11,15],9));
 // output: [0,1]
 console.log(TwoSumSorted([3,2,4],6));
