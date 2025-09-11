@@ -30,9 +30,8 @@ def maxProfit(prices):
 print(maxProfit([7,1,5,3,6,4]))  # Output: 5
 print(maxProfit([7,6,4,3,1]))    # Output: 0
 
-# Brute Force Approach:O(n^2)
+# Approach: Brute Force:O(n^2)
 # Check every possible pair of buy and sell days to find the maximum profit.
-# Optimal Approach:O(n)
-
+# optimized Approach: One Pass
 # Time Complexity:O(n)
 # Space Complexity:O(1)
