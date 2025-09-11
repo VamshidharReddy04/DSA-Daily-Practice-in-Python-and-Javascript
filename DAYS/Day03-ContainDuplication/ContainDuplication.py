@@ -14,16 +14,22 @@
 
 class Solution:
     def conatainsDuplication(self,nums):
+        seen = set()
+        # loop through the array to check for duplicates
         seen= set()
         for num in nums:
             if num in seen:
+                # if a duplicate is found, return True
                 return True
             seen.add(num)
+        # if no duplicates are found, return False
         return False
+
+# Test Cases
 print(Solution().conatainsDuplication([1,2,3,1])) # True
 print(Solution().conatainsDuplication([1,2,3,4])) # False
 print(Solution().conatainsDuplication([1,1,1,3,3,4,3,2,4,2])) # True
 
 # Time Complexity: O(n)
 # Space Complexity: O(n)
-# Approach: Using HashSet to store the elements and check for duplicates
+# Approach : Hashing

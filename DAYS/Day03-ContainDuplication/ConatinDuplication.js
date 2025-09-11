@@ -14,5 +14,6 @@ function containsDuplicate(nums) {
 console.log(containsDuplicate([1, 2, 3, 1])); // true
 console.log(containsDuplicate([1, 2, 3, 4])); // false
 
+// Approach : Hashing
 // Time Complexity: O(n) - We traverse the array once
 // Space Complexity: O(n) - In the worst case, we may store all elements in the set
