@@ -1,4 +1,5 @@
 # Array Problem: Max Product 
+# https://leetcode.com/problems/maximum-product-subarray/
 # Given an array of integers, find the maximum product of two integers in the array.
 
 # Example:
@@ -8,7 +9,6 @@
 
 class solution:
     def maxProduct(self,nums):
-        maxProd = minProd = maxoverall = nums[0]
         maxProd=minProd=maxoverall=nums[0]
         for num in nums[1: ]:
             temp = maxProd
