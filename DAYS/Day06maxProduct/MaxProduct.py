@@ -19,6 +19,7 @@ class solution:
             # Update maxoverall to be the maximum of the current maxoverall and the current maxProd
             maxoverall = max(maxoverall, maxProd)
         return maxoverall
+    
 # test cases
 print(solution().maxProduct([2,3,-2,4]))  # Output: 6
 print(solution().maxProduct([-2,0,-1]))   # Output: 0
