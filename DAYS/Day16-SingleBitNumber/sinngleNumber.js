@@ -6,10 +6,10 @@
 
 function singleNumber(nums) {
     let result =0
-    for (let num of nums) {
-        result ^= num
+    for (let num of nums) { 
+        result ^= num // XOR operation
     }
-    return result
+    return result // The single number will remain after all pairs cancel out
 }
 // Test cases
 console.log(singleNumber([4,1,2,1,2])) // Output: 4
