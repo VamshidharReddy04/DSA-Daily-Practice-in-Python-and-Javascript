@@ -20,6 +20,7 @@ class Solution:
             a, b = sum, carry
         # if a is negative, get a's two's complement positive value then return negative value
         return a if a <= max else ~(a ^ mask)
+        
 # Test cases
 print(Solution().getSum(1,2)) # Output: 3
 print(Solution().getSum(-2,3)) # Output: 1

@@ -11,10 +11,10 @@ function getSum(a,b){
     while(b !==0){
         let sum =a^b // sum without carry
         let carry = (a&b)<<1 // carry bits
-        a = sum
-        b = carry
+        a = sum     // update a to sum
+        b = carry   // update b to carry
     }
-    return a
+    return a   // return sum
 }
 // Test cases
 console.log(getSum(1,2)) // Output: 3
