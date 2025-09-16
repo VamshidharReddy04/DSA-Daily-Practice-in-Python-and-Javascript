@@ -11,8 +11,9 @@ function hammingWeight(n){
        n=n&(n-1) // & operation reduces the last set bit to 0
        count++  // increment count for every set bit
    }
-   return count
+   return count // return count of set bits
 }
+
 // Test Cases
 console.log(hammingWeight(11)) //3
 console.log(hammingWeight(128)) //1
