@@ -8,7 +8,9 @@
 # 1. Recursion (Brute Force)
 # 2. Memoization (Top-Down DP)
 # 3. Tabulation (Bottom-Up DP)
+
 # Soultions: Bottom-Up DP
+# Leetcode: https://leetcode.com/problems/longest-common-subsequence/
 class Solution:
     def longestCommonSubsequence(self,text1,text2):
         m=len(text1) 
