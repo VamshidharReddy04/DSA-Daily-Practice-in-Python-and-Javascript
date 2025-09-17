@@ -13,6 +13,7 @@
 # 5. Binary Search
 
 # Solution 5: Binary Search (Patience Sorting)
+# LeetCode: https://leetcode.com/problems/longest-increasing-subsequence/description/
 import bisect
 class Solution:
     def lengthOfLIS(self, nums ):

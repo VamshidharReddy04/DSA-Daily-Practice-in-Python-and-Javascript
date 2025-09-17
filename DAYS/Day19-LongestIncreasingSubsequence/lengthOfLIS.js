@@ -13,6 +13,8 @@
 // 5. Binary Search
 
 // Soultion 5 : Binary Search
+// LeetCode: https://leetcode.com/problems/longest-increasing-subsequence/description/
+
 function lengthOfLIS(nums){
     let sub=[];      // sub array to store the longest increasing subsequence
     for (let num of nums){ 
