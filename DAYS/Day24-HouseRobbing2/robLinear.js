@@ -15,17 +15,20 @@
 
 // Approach 4: Space Optimization
 function rob(nums) {
-    let prev = 0;
-    let prev2 = 0;
-    for (let i = 0; i < nums.length; i++) {
-        let take = nums[i];
-        if (i > 1) take += prev2;
-        let notTake = 0 + prev;
-        let curr = Math.max(take, notTake);
-        prev2 = prev;
-        prev = curr;
+    const n = nums.length;
+    if (n === 0) return 0;
+    if (n === 1) return nums[0];
+    function robLinear(arr) {
+        let prev1 = 0, prev2 = 0;
+        for (let num of arr) {
+            let curr = Math.max(num + prev2, prev1);
+            prev2 = prev1;
+            prev1 = curr;
+        }
+        return prev1;
     }
-    return prev;
+    // Exclude first or last house
+    return Math.max(robLinear(nums.slice(0, n - 1)), robLinear(nums.slice(1)));
 }
 // Test cases
 console.log(rob([2, 3, 2])); // 3

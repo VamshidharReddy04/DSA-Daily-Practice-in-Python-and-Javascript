@@ -14,43 +14,52 @@
 # 5. Circular House Robber
 
 # Approach 4: Space Optimization
+# LeetCode - 213. House Robber II
+# https://leetcode.com/problems/house-robber-ii
 class Solution:
-    def rob(self, nums):
-        n = len(nums)
-        if n == 0:
+    def rob(self, nums):    
+        n = len(nums)   # Number of houses
+        if n == 0:      # No houses
             return 0
-        if n == 1:
-            return nums[0]
+        if n == 1:      # Only one house
+            return 0  # As per new requirement, output 0 if only one house
         # Helper function for linear house robbing
-        def rob_linear(arr):
-            prev1, prev2 = 0, 0
-            for num in arr:
-                curr = max(num + prev2, prev1)
-                prev2 = prev1
-                prev1 = curr
-            return prev1
+        def rob(arr):    
+            prev1, prev2 = 0, 0    # Initialize prev1 and prev2
+            for num in arr:        
+                curr = max(num + prev2, prev1) # Current max money
+                prev2 = prev1                  # Update prev2
+                prev1 = curr                   # Update prev1
+            return prev1                       # Return the maximum money robbed
         # Exclude first house or last house
-        return max(rob_linear(nums[:-1]), rob_linear(nums[1:]))    
+        return max(rob(nums[:-1]), rob(nums[1:]))     # Return the maximum money robbed
 # Test Cases
 print(Solution().rob([2,3,2])) # 3
 print(Solution().rob([1,2,3,1])) # 4
 print(Solution().rob([0])) # 0
+
 # Best Approach : Space Optimization
 # Complexity Analysis: Time O(n) | Space O(1)
 
 class RobSolution:
     def rob(self, nums):
+        n = len(nums)
+        if n == 0:
+            return 0
+        if n == 1:
+            return nums[0]  # As per new requirement, output 0 if only one house
         def robing(nums):
-            prev1, prev2 = 0, 0
-            for num in nums:
-                curr = max(num + prev2, prev1)
-                prev2 = prev1
-                prev1 = curr
-            return prev1
-        return max(robing(nums[:-1]), robing(nums[1:]))
+            prev1, prev2 = 0, 0              # Initialize prev1 and prev2
+            for num in nums:                 # Iterate through each house
+                curr = max(num + prev2, prev1) # Current max money
+                prev2 = prev1                  # Update prev2
+                prev1 = curr                   # Update prev1
+            return prev1                       # Return the maximum money robbed
+        return max(robing(nums[:-1]), robing(nums[1:])) # Return the maximum money robbed
 print(RobSolution().rob([2,3,2])) # 3
 print(RobSolution().rob([1,2,3,1])) # 4
 print(RobSolution().rob([0])) # 0
+print(RobSolution().rob([1])) # 0
 # Complexity Analysis: Time O(n) | Space O(1)
     
 
