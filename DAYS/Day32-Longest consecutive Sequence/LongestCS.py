@@ -9,7 +9,6 @@
 
 # Solution 2: HashSet
 # LeetCode: https://leetcode.com/problems/longest-consecutive-sequence/solution/
-
 class Solution:
     def longestConsecutive(self, nums):
         if not nums: return 0

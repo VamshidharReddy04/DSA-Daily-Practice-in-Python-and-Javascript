@@ -2,7 +2,6 @@
 // Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 // Example 1: Input: nums = [100,4,200,1,3,2] Output: 4 Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
 // Example 2: Input: nums = [0,3,7,2,5,8,4,6,0,1] Output: 9
-
 //Different Approaches:
 // 1.Sorting: Time: O(n log n), Space: O(1) or O(n) depending on sorting algorithm
 // 2.HashSet: Time: O(n), Space: O(n)
