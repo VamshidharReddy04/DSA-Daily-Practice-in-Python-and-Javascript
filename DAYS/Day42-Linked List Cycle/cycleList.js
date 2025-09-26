@@ -12,19 +12,22 @@
 // 3. Floyd’s Cycle-Finding Algorithm - Time Complexity: O(n), Space Complexity: O(1)
 // 4. Modifying the Linked List - Time Complexity: O(n), Space Complexity: O(1) (Not Recommended)
 
+// Solution: Two Pointer Approach
+// LeetCode: https://leetcode.com/problems/linked-list-cycle/
 class ListNode {
     constructor(value) {
         this.value = value;
         this.next = null;
     }
 }
+// Function to detect cycle in a linked list
 function cycleList(head){
     let slow=head;
     let fast=head;
-    while(fast && fast.next){
-        slow=slow.next;
-        fast=fast.next.next;
-        if(slow===fast) return true;
+    while(fast && fast.next){ // fast and fast.next should not be null
+        slow=slow.next;     // slow will move one step
+        fast=fast.next.next;    // fast will move two steps
+        if(slow===fast) return true; // if both meet at same node, cycle is present
     }
     return false
 }
@@ -42,3 +45,6 @@ head2.next.next = head2; // Creates a cycle
 console.log(cycleList(head2)); // Output: true
 let head3 = new ListNode(1);
 console.log(cycleList(head3)); // Output: false
+
+// Best Approach: Two Pointer Approach
+// Complexity Analysis: Time Complexity: O(n), Space Complexity: O(1)

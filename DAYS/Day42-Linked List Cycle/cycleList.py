@@ -21,8 +21,7 @@ class Solution:
     @staticmethod
     def cycleList(head):
         if not head or not head.next:
-            return False
-        
+            return False        
         slow, fast = head, head
         while fast and fast.next:
             slow = slow.next
