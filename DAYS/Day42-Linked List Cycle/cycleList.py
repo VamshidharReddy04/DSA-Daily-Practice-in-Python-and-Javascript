@@ -17,6 +17,7 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+# Floyd’s Cycle-Finding Algorithm
 class Solution:
     @staticmethod
     def cycleList(head):
@@ -24,11 +25,11 @@ class Solution:
             return False        
         slow, fast = head, head
         while fast and fast.next:
-            slow = slow.next
-            fast = fast.next.next
-            if slow == fast:
-                return True
-        return False
+            slow = slow.next        # Move slow pointer by 1 node
+            fast = fast.next.next   # Move fast pointer by 2 nodes
+            if slow == fast:       # If they meet, there is a cycle
+                return True        # Cycle detected
+        return False    # No cycle detected
 
 # Helper function to create linked list with cycle
 def LinkedCycle(values, pos):
@@ -52,4 +53,6 @@ print(Solution.cycleList(head2))  # Expected output: True
 head3 = LinkedCycle([1], -1)
 print(Solution.cycleList(head3))  # Expected output: False
 
+# Best Approach: Floyd’s Cycle-Finding Algorithm
+# Complexity Analysis: Time Complexity: O(n), Space Complexity: O(1)
     
