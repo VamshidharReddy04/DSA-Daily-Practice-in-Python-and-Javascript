@@ -7,7 +7,8 @@
 // Different Approaches:
 // 1. Transpose and Reverse - Time: O(n^2), Space: O(1)
 // 2. Brute Force - Time: O(n^2), Space: O(n^2)
-
+// Solution- Transpose and Reverse
+// LeetCode: https://leetcode.com/problems/rotate-image/
 function rotate(matrix) {
     const n = matrix.length;
     for (let i = 0; i < n; i++) {
