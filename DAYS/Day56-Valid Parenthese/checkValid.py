@@ -5,7 +5,7 @@
 # Example 3: Input s = "(]" Output: false
 # Different Approaches:
 # 1. Using Stack-Time O(n) Space O(n)
-# 2. Using HashMap-Time O(n) Space O(n)
+# 2. Using HashMap-Time O(n) Space O(n)     
 # 3. Using String Replacement-Time O(n^2) Space O(1)
 
 # Leetcode: https://leetcode.com/problems/valid-parentheses/
